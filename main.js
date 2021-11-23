@@ -38,14 +38,18 @@ app.on('window-all-closed', function () {
   app.quit()
 })
 
-const wss = new WebSocket.Server({ port: 9032 });
+const wss = new WebSocket.WebSocketServer({ port: 9032 });
+
 
 wss.on('connection', ws => {
-  console.log(111)
   ws.on('message', message => {
     console.log('received: %s', message);
   });
 
   ws.send('something');
 });
+
+// const socket = new WebSocket('ws://localhost:13528')
+
+
 
