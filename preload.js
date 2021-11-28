@@ -7,17 +7,17 @@ window.addEventListener('DOMContentLoaded', () => {
   for (const dependency of ['chrome', 'node', 'electron']) {
     replaceText(`${dependency}-version`, process.versions[dependency])
   }
-  setTimeout(()=>{
-   const socket =  new WebSocket("ws://localhost:9032");
-   socket.onopen = () => {
-    setTimeout(()=>{
-      socket.send("Hello! i am aaa");
-    },2000)
-   };
-  
-   socket.onmessage = (data) => {
-    console.log(data);
-   };
-  })
+  setTimeout(() => {
+    const socket = new WebSocket("ws://localhost:9032");
+    socket.onopen = () => {
+      setTimeout(() => {
+        socket.send(JSON.stringify({ "requestID": "FDBE7485", "version": "1.0", "cmd": "getAgentInfo", "printer": null, "kdzsType": "getAgentInfo" }));
+      }, 1000)
+    };
+
+    socket.onmessage = (data) => {
+      console.log(data);
+    };
+  }, 2000)
 
 })
