@@ -3,15 +3,20 @@ const { writePrintLog } = require('./file')
 
 class WebSocketServer {
     constructor() {
+        if (WebSocketServer.instance) {
+            return WebSocketServer.instance
+        }
+        WebSocketServer.instance = this;
         this.ws;
         this.listenData = {}
-        this.init() // 需要设计成单例模式
+        this.init()
     }
     init() {
         const Ws = new WebSocket.WebSocketServer({ port: 9032 }); // 占用9032端口
         const _this = this
         Ws.on('connection', ws => {
             _this.ws = ws
+            writePrintLog('监听9032端口建立socket服务')
             ws.on('message', (msg = '') => {
                 console.log('get chorme message', msg.toString())
                 var msgData;

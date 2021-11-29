@@ -21,12 +21,14 @@ function createWindow() {
   win.webContents.openDevTools()
 
 }
+
+app.on('ready', () => {
+  process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true'//关闭web安全警告
+})
+
 /* 平台准备好后的回调 */
 app.whenReady().then(() => {
   createWindow()
-
-
-
 
   app.on('activate', function () {
     console.log('activate', BrowserWindow.getAllWindows())
@@ -39,23 +41,3 @@ app.on('window-all-closed', function () {
   console.log('window-all-closed', process.platform) // 平台
   app.quit()
 })
-
-
-
-// const wss = new WebSocket.WebSocketServer({ port: 9032 });
-
-
-// wss.on('connection', ws => {
-//   ws.on('message', message => {
-//     console.log('received: %s', message);
-//   });
-
-//   ws.send('something');
-// });
-
-//  const socket = new WebSocket('ws://localhost:13528')
-
-
-//  socket.onopen = () => {
-//    console.log('aaa')
-//  }

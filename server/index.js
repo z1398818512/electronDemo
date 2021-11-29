@@ -4,7 +4,6 @@ const WebSockeClient = require('./scoket_client.js')
 const ScoketServer = new WebSocketServer()
 const ScoketClient = new WebSockeClient()
 
-
 /* 菜鸟控件的交互 */
 ScoketServer.listenMessage('getAgentInfo', (msg) => {
     ScoketClient.send(msg)

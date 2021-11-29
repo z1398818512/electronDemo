@@ -1,0 +1,18 @@
+
+2021-11-28 16:28:37   从chrome获取的数据：{"requestID":"FDBE7485","version":"1.0","cmd":"getAgentInfo","printer":null,"kdzsType":"getAgentInfo"}
+2021-11-28 16:28:37   发送给打印机的数据：{"requestID":"FDBE7485","version":"1.0","cmd":"getAgentInfo","printer":null,"kdzsType":"getAgentInfo"}
+2021-11-28 16:28:37   从打印机获取的数据：{"cmd":"getAgentInfo","msg":"成功","requestID":"FDBE7485","status":"success","version":"0.4.9.3"}
+2021-11-28 16:28:37   发送给chrome数据：{"cmd":"getAgentInfo","msg":"成功","requestID":"FDBE7485","status":"success","version":"0.4.9.3"}
+2021-11-28 16:29:15   从chrome获取的数据：{"requestID":"FDBE7485","version":"1.0","cmd":"getAgentInfo","printer":null,"kdzsType":"getAgentInfo"}
+2021-11-28 16:29:15   发送给打印机的数据：{"requestID":"FDBE7485","version":"1.0","cmd":"getAgentInfo","printer":null,"kdzsType":"getAgentInfo"}
+2021-11-28 16:29:15   从打印机获取的数据：{"cmd":"getAgentInfo","msg":"成功","requestID":"FDBE7485","status":"success","version":"0.4.9.3"}
+2021-11-28 16:29:15   发送给chrome数据：{"cmd":"getAgentInfo","msg":"成功","requestID":"FDBE7485","status":"success","version":"0.4.9.3"}
+2021-11-28 16:30:01   从chrome获取的数据：{"requestID":"FDBE7485","version":"1.0","cmd":"getAgentInfo","printer":null,"kdzsType":"getAgentInfo"}
+2021-11-28 16:30:01   发送给打印机的数据：{"requestID":"FDBE7485","version":"1.0","cmd":"getAgentInfo","printer":null,"kdzsType":"getAgentInfo"}
+2021-11-28 16:30:01   从打印机获取的数据：{"cmd":"getAgentInfo","msg":"成功","requestID":"FDBE7485","status":"success","version":"0.4.9.3"}
+2021-11-28 16:30:01   发送给chrome数据：{"cmd":"getAgentInfo","msg":"成功","requestID":"FDBE7485","status":"success","version":"0.4.9.3"}
+2021-11-28 16:32:22   监听9032端口建立socket服务
+2021-11-28 16:32:24   从chrome获取的数据：{"requestID":"FDBE7485","version":"1.0","cmd":"getAgentInfo","printer":null,"kdzsType":"getAgentInfo"}
+2021-11-28 16:32:24   发送给打印机的数据：{"requestID":"FDBE7485","version":"1.0","cmd":"getAgentInfo","printer":null,"kdzsType":"getAgentInfo"}
+2021-11-28 16:32:24   从打印机获取的数据：{"cmd":"getAgentInfo","msg":"成功","requestID":"FDBE7485","status":"success","version":"0.4.9.3"}
+2021-11-28 16:32:24   发送给chrome数据：{"cmd":"getAgentInfo","msg":"成功","requestID":"FDBE7485","status":"success","version":"0.4.9.3"}
