@@ -16,7 +16,7 @@ class WebSocketServer {
         const _this = this
         Ws.on('connection', ws => {
             _this.ws = ws
-            writePrintLog('监听9032端口建立socket服务')
+            writePrintLog('socket服务器启动成功，监听9032端口')
             ws.on('message', (msg = '') => {
                 console.log('get chorme message', msg.toString())
                 var msgData;

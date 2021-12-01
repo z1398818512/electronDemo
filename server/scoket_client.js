@@ -1,18 +1,32 @@
 const WebSocket = require('ws');
 const { writePrintLog } = require('./file')
 
-
+/*
+* sockeClinet socket客户端
+* 工厂+单例
+*/
 class sockeClinet {
-    constructor(url) {
+    constructor(platFormName) {
+        this.platformMap = {
+            'CAINIAO': "ws://localhost:13528",
+            'PDD': 'ws://localhost:5000/'
+        }
+
+        if (sockeClinet.instanceMap && sockeClinet.instanceMap[platFormName]) {
+            return sockeClinet.instanceMap[platFormName]
+        }
+        if (!sockeClinet.instanceMap) sockeClinet.instanceMap = {}
+        sockeClinet.instanceMap[platFormName] = this;
         this.Ws = {};
-        this.init(url);
+        this.init(this.platformMap[platFormName] || "ws://localhost:13528");
         this.listenData = {}
+        this.platFormName = platFormName
     };
-    init(url = 'ws://localhost:13528') {
+    init(url = '') {
         const _this = this;
         _this.Ws = new WebSocket(url)
         _this.Ws.on('open', function open() {
-            console.log('link success')
+            writePrintLog(`连接${url}成功`)
         });
         _this.Ws.on('message', (msg = '') => {
             var msgData;
